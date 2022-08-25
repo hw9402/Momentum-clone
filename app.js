@@ -1,10 +1,18 @@
-const player = {
-    name: "hw",
-    age: 17,
-    gender: "male",
-    sayHello: function(name) {
-        alert("Hi "+name+"! nice to meet you!");
-    }
+const title = document.querySelector(".hello h1");
+
+function handleTitleClick() {
+    console.log("title was clicked");
+    title.style.color = "blue";
 }
-player.sayHello("Tom");
-player.sayHello("Harry");
+
+function handleMouseEnter() {
+    title.innerText = "Mouse is here";
+}
+
+function handleMouseLeave() {
+    title.innerText = "Mouse is gone";
+}
+
+title.addEventListener("click", handleTitleClick);
+title.addEventListener("mouseenter", handleMouseEnter);
+title.addEventListener("mouseleave", handleMouseLeave);
